@@ -45,5 +45,5 @@ This project reflects my ability to:
 
 ## 👩‍💻 Author
 
-Sana Awan  
+Sana Khalid  
 Python & Automation Enthusiast
