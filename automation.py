@@ -21,4 +21,18 @@ files1 = os.listdir(folder1)
 for file in files1:
     if file.endswith(".png"):
         print(file)
+
+
+os.path.join(folder, "file.txt")
+os.path.isfile(r"C:\Users\User\OneDrive\Documents\python-tutorials\file.txt")
+os.path.isdir(r"C:\Users\User\OneDrive\Documents\python-tutorials")
+
+for file in os.listdir(folder):
+    full_path = os.path.join(folder, file)
+
+    if os.path.isfile(full_path):
+        print("File:", file)
+    else:
+        print("Folder:", file)
+
         
