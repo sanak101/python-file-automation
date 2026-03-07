@@ -38,11 +38,10 @@ for file in os.listdir(folder):
     
 # Renaming file with a prefix
 
-'''for file in os.listdir(folder):
-    old_path = os.path.join(folder, file)
-    new_path = os.path.join(folder, "new_" + file)
-
-    os.rename(old_path, new_path)'''
+# for file in os.listdir(folder):
+#   old_path = os.path.join(folder, file)
+#   new_path = os.path.join(folder, "new_" + file)
+#  os.rename(old_path, new_path)
 
 
 

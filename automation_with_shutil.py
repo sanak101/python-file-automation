@@ -4,6 +4,7 @@ import shutil
 folder = r"C:\Users\User\OneDrive\Documents\python-tutorials"
 files = os.listdir(folder)
 
+#Moving & Copying Files
 
 for file in os.listdir(folder):
     if file.endswith(".jpg"):
@@ -23,3 +24,19 @@ for file in os.listdir(source_folder):
         shutil.copy(full_path, destination_folder)
         
 
+# Sort Files by Type Automatically
+
+folder = r"C:\Users\User\OneDrive\Downloads"
+
+for file in os.listdir(folder):
+    full_path =  os.path.join(folder, file)
+
+    if os.path.isfile(full_path):
+        extension = file.split(".")[-1]
+
+        target_folder = os.path.join(folder, extension)
+
+        if not os.path.exists(target_folder):
+            os.mkdir(target_folder)
+        
+        shutil.move(full_path, os.path.join(target_folder, file))
