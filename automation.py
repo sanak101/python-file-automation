@@ -65,3 +65,25 @@ for file in os.listdir(folder):
         os.rename(old_path, new_path)
 
 print("Files restored.")
+
+# Error Handling 
+old_path = r"C:\Users\User\OneDrive\Documents\python-tutorials"
+new_path = r"C:\Users\User\OneDrive\Documents\python-tutorials\renamed_file.py"
+
+try:
+    os.rename(old_path, new_path)
+except Exception as e:
+    print("Error:", e)
+
+# Rename Many Files Safely
+
+for file in os.listdir(folder):
+    old_path = os.path.join(folder, file)
+    if os.path.isfile(old_path):
+        new_path = os.path.join(folder, "new_" + file)
+
+        try:
+            os.rename(old_path, new_path)
+            print("Renamed:",file)
+        except Exception as e:
+            print("Error Msg:", file,":",e)

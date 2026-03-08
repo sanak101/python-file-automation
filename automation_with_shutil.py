@@ -40,3 +40,7 @@ for file in os.listdir(folder):
             os.mkdir(target_folder)
         
         shutil.move(full_path, os.path.join(target_folder, file))
+
+
+
+
